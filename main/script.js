@@ -4,7 +4,7 @@
     container.style.width='100%';
     
     var img = document.createElement("img");
-    img.src = "../../images/cover5.jpg";
+    img.src = "../images/cover5.jpg";
     var src=document.getElementById('body');
     container.appendChild(img);
     img.style.width='100%';
