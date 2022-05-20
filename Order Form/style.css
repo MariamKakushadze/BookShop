@@ -1,0 +1,123 @@
+@font-face {
+	font-family: 'Arial';
+	src: url('../images/Arial.ttf');
+	src: url('../images/Arial.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+    font-family: 'Arial';
+    font-size: 17px;
+    padding: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  
+  .col-50 {
+    -ms-flex: 50%; 
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; 
+    flex: 75%;
+  }
+  
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #d7eeee;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+ 
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  input[type=date]{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  input[type=number]{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  input[type=radio]{
+    cursor: pointer;
+  }
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  .radio label{
+    display: inline-block;
+    padding-right: 10px;
+    white-space: nowrap;
+      
+  }
+
+  .radio{
+    font-weight: bold;
+    font-style: italic;
+    color:#0b6464 ;
+    margin-left:20px;
+  }
+  .checkboxes label {
+    display: inline-block;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  .checkboxes input {
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .checkboxes{
+      font-weight: bold;
+      font-style: italic;
+      color:#0b6464 ;
+  }
+
+
+  .btn {
+    background-color:rgb(12, 129, 129);
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color:rgb(93, 184, 153);
+  }
+  
