@@ -4,38 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />  
+
     <title>Book Shop</title>
   </head>
  <body>
+  
     <div class="row">
         <div class="col-75">
           <div class="container">
-            <form action="/action_page.php">
+            <form onsubmit="submit">
             
               <div class="row">
                 <div class="col-50">
                   <h3>Billing Address</h3>
                   <label for="fname"><i class="fa fa-user"></i> First Name</label>
                   <input type="text" id="fname" name="firstname" placeholder="Name" required
-                  minlength="4" pattern="[a-zA-Z'-'\s]*" input onkeypress="return /[a-z]/i.test(event.key)" >
+                  minlength="4" pattern="[a-zA-Z'-'\s]*" input onkeypress="return /[a-z]/i.test(event.key)" onchange="return nameVal()">
                   <label for="Surname"><i class="fa fa-user"></i> Surname</label>
                   <input type="text" id="surname" name="Surname" placeholder="Surname" required
-                  minlength="5" pattern="[a-zA-Z'-'\s]*" input onkeypress="return /[a-z]/i.test(event.key)" >
+                  minlength="5" pattern="[a-zA-Z'-'\s]*" input onkeypress="return /[a-z]/i.test(event.key)" onchange="return surnameVal()">
                   <label for="date"><i class="fa fa-address-card-o"></i> Delivery Date</label>
-                  <input type="date" id="date" name="date" value="22/05/2022" required>
-                  <label for="street"><i class="fa fa-institution"></i> Street</label>
-                  <input type="text" id="street" name="street" placeholder="Street"
-                  required minlength="5">
+                  <input type="date" id="date" name="date" onchange='return dateval()' value="22/05/2022" required>
+                  <label for="street"><i class="fa fa-institution"> </i> Street</label>
+                  <input type="text" id="street" name="street" placeholder="Street"pattern='[0-9a-zA-Z]'
+                  required minlength="5" input onkeypress="return /[0-9a-zA-Z]/i.test(event.key)" onchange="return streetVal()">
       
                   <div class="row">
                     <div class="col-50">
                       <label for="house">House Number</label>
-                      <input type="number" id="house" name="house" placeholder="12" required min="1">
+                      <input type="number" id="house" name="house" placeholder="12" required min="1" onchange="return houseVal()">
                     </div>
                     <div class="col-50">
                       <label for="flat">Flat Number</label>
-                      <input type="number" id="flat" name="flat" placeholder="12" required >
+                      <input type="number" id="flat" name="flat" placeholder="12" required min="1" onchange="return flatVal()">
                     </div>
                   </div>
                 </div>
@@ -45,7 +47,7 @@
                   <h3>Payment Method</h3>
                   <div class="row">
                       <div class="radio">
-                  <input type="radio" id="credit" name="Payment">
+                  <input type="radio" id="credit" name="Payment" required>
                   <label for="credit"> Credit Card</label>
                   <br>
         
@@ -56,32 +58,34 @@
                   </div>
                   </div>
                   <h3>Choose 2 gifts below:</h3>
+                  
                   <div class ='checkboxes'>
+                    <span id="checkErr"></span>
                   <label for="gift">Pack as a gift</label>
-                  <input type="checkbox" id="gift"  >
+                  <input type="checkbox" class="check" >
                   <br>
                   <label for="pcard">Add postcard</label>
-                  <input type="checkbox" id="pcard" >
+                  <input type="checkbox" class="check" >
                   <br>
             
                   <label for="discount">Provide 2% discount to the next time</label>
-                  <input type="checkbox" id="discount">
+                  <input type="checkbox" class="check">
                   <br>
                   <label for="pen">Branded pen or pencil</label>
-                  <input type="checkbox" id="pen" >
+                  <input type="checkbox" class="check" >
                 </div> 
                   </div>
                 </div>
                 
               </div>
-              <label>
-              </label>
-              <input type="submit" value="Continue to checkout" class="btn">
+          
+        
+              <input type="submit"  value="Continue to checkout" class="btn" id="btn" >
             </form>
           </div>
         </div>
-        
       </div>
-      
+  
+      <script src="../Order Form/script.js"></script>   
  </body>
 </html>
